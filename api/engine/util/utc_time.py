@@ -1,5 +1,5 @@
 import datetime
-import pytz
+#import pytz
 
 
 def validate_time_difference(time) -> bool:
@@ -25,8 +25,8 @@ def get_current_utc_time() -> str:
     of + or - 2 minutes
     :return: string
     """
-    utc_timezone = pytz.UTC
-    curr_utc_time =  datetime.datetime.now(utc_timezone)
+    #utc_timezone = pytz.UTC
+    curr_utc_time =  datetime.datetime.utcnow()
     
     if validate_time_difference(curr_utc_time):
         time_string = curr_utc_time.strftime('%Y-%m-%d %H:%M:%S %Z')
