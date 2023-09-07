@@ -39,4 +39,3 @@ api.add_resource(Main, '/api')
 """
 
 
-app.run()
