@@ -13,11 +13,13 @@ class Main(Resource):
             "current_day": get_current_day(),
             "utc_time": get_current_utc_time(),
             "track": req_args["track"],
-            "github_file_url":'',
-            "github_repo_url": '',
+            "github_file_url":
+                'https://github.com/timiwritescode/hngx_task_one/blob/main/app.py',
+            "github_repo_url": 
+                'https://github.com/timiwritescode/hngx_task_one',
             "status_code": 200
         }
 
-        return json_data
+        return json_data, 200
     
 api.add_resource(Main, '/api')    
