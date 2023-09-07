@@ -3,7 +3,7 @@
 #from flask import jsonify
 #from engine.arguments import main_get_arguments
 #from engine.util.utc_time import get_current_utc_time, get_current_day
-#from flask import Flask
+from flask import Flask
 
 app = Flask(__name__)
 
