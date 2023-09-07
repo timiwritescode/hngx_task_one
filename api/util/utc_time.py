@@ -4,8 +4,8 @@ import pytz
 
 def validate_time_difference(time) -> bool:
     """
-    Function to validate that time falls within the 
-    +or- 2 minutes time window 
+    Function to validate that time falls within the
+    +or- 2 minutes time window
     """
     curr_utc_time =  time
 
@@ -27,9 +27,9 @@ def get_current_utc_time() -> str:
     """
     utc_timezone = pytz.UTC
     curr_utc_time =  datetime.datetime.now(utc_timezone)
-    
+
     if validate_time_difference(curr_utc_time):
-        time_string = curr_utc_time.strftime('%Y-%m-%d %H:%M:%S %Z')
+        time_string = curr_utc_time.strftime('%Y-%m-%dT%H:%M:%SZ')
         return time_string
 
     return "Time outside 2 minutes window you might want to reset your time"
