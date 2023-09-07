@@ -3,10 +3,16 @@ from flask_restful import Resource
 from flask import jsonify
 from engine.arguments import main_get_arguments
 from engine.util.utc_time import get_current_utc_time, get_current_day
+from flask import Flask
 
+app = Flask(__name__)
 
+@app.route('/api')
+def hello():
+    return "Hello Vercel"
 # each key of the json data are entered into 
 
+"""
 class Main(Resource):
 
     def get(self):
@@ -27,3 +33,5 @@ class Main(Resource):
         return jsonify(json_data)
     
 api.add_resource(Main, '/api')    
+
+"""
